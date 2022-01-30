@@ -18,3 +18,9 @@ E:\Desktop\u\7mo\Integrador\intro.net\Municipal_reports\Municipal_reports\bin\De
 E:\Desktop\u\7mo\Integrador\intro.net\Municipal_reports\Municipal_reports\bin\Debug\WPFToolkit.dll
 E:\Desktop\u\7mo\Integrador\intro.net\Municipal_reports\Municipal_reports\obj\Debug\Municipal_reports.csproj.AssemblyReference.cache
 E:\Desktop\u\7mo\Integrador\intro.net\Municipal_reports\Municipal_reports\obj\Debug\Municipal_reports.csproj.CopyComplete
+E:\Desktop\u\7mo\Integrador\intro.net\Municipal_reports\Municipal_reports\bin\Debug\LiveCharts.dll
+E:\Desktop\u\7mo\Integrador\intro.net\Municipal_reports\Municipal_reports\bin\Debug\LiveCharts.Wpf.dll
+E:\Desktop\u\7mo\Integrador\intro.net\Municipal_reports\Municipal_reports\bin\Debug\LiveCharts.pdb
+E:\Desktop\u\7mo\Integrador\intro.net\Municipal_reports\Municipal_reports\bin\Debug\LiveCharts.xml
+E:\Desktop\u\7mo\Integrador\intro.net\Municipal_reports\Municipal_reports\bin\Debug\LiveCharts.Wpf.pdb
+E:\Desktop\u\7mo\Integrador\intro.net\Municipal_reports\Municipal_reports\bin\Debug\LiveCharts.Wpf.xml

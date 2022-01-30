@@ -14,6 +14,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using Microsoft.Win32;
+using LiveCharts;
+using LiveCharts.Wpf;
+using LiveCharts.Defaults;
 
 public class Municipality
 {
@@ -43,11 +46,91 @@ namespace Municipal_reports
             municipalities = new List<Municipality>();
             Char[] comboBoxItems = new[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
             comboBoxLetters.ItemsSource = comboBoxItems;
+
+            SeriesCollection = new SeriesCollection
+                {
+                    new PieSeries
+                {
+                    Title = "Municipio",
+                    Values = new ChartValues<ObservableValue>{ new ObservableValue(0) },
+                    DataLabels = true
+                },
+                new PieSeries
+                {
+                    Title = "Area no municipalizada",
+                    Values = new ChartValues<ObservableValue>{ new ObservableValue(0) },
+                    DataLabels = true
+                },
+                new PieSeries
+                {
+                    Title = "Isla",
+                    Values = new ChartValues<ObservableValue>{ new ObservableValue(0) },
+                    DataLabels = true
+                }
+
+                };
+
+            DataContext = this;
+
         }
 
-        private void dGRep1_SelChanged(object sender, SelectionChangedEventArgs e)
-        {
+        public SeriesCollection SeriesCollection { get; set; }
 
+        private void R2Tab_Clicked(object sender, MouseButtonEventArgs e)
+        {
+            
+            if (municipalities.Count != 0) {
+                Console.Out.WriteLine("HELLOOOO");
+
+                int mCounter = 0;
+                int iCounter = 0;
+                int ACounter = 0;
+
+                foreach (Municipality m in municipalities)
+                {
+                    if (m.type.Equals("Municipio"))
+                    {
+                        mCounter++;
+                    }
+                    else if (m.type.Equals("Isla"))
+                    {
+                        iCounter++;
+                    }
+                    else
+                    {
+                        ACounter++;
+                    }
+
+                }
+                pieChart.Series.Clear();
+                SeriesCollection seriesCollectionUpdated = new SeriesCollection 
+                {
+                    new PieSeries
+                {
+                    Title = "Municipio",
+                    Values = new ChartValues<ObservableValue>{ new ObservableValue(mCounter) },
+                    DataLabels = true
+                },
+                new PieSeries
+                {
+                    Title = "Area no municipalizada",
+                    Values = new ChartValues<ObservableValue>{ new ObservableValue(iCounter) },
+                    DataLabels = true
+                },
+                new PieSeries
+                {
+                    Title = "Isla",
+                    Values = new ChartValues<ObservableValue>{ new ObservableValue(ACounter) },
+                    DataLabels = true
+                }
+
+                };
+
+                pieChart.Series = seriesCollectionUpdated;
+
+
+            }
+            
         }
 
         private void loadCsv(object sender, RoutedEventArgs e)

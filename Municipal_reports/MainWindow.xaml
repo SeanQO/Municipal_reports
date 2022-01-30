@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:DV="clr-namespace:System.Windows.Controls.DataVisualization;assembly=System.Windows.Controls.DataVisualization.Toolkit"  
         xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
-        xmlns:local="clr-namespace:Municipal_reports"
+        xmlns:local="clr-namespace:Municipal_reports" xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
     <Grid>
         <TabControl>
             <TabItem Header="Cargar" >
@@ -47,7 +48,7 @@
                     </StackPanel>
 
                     <StackPanel Grid.Row="1">
-                        <DataGrid x:Name="dataGridTwo" Height="288" Margin="32,0,32,0" CanUserAddRows="false" IsReadOnly="True" SelectionChanged="dGRep1_SelChanged">
+                        <DataGrid x:Name="dataGridTwo" Height="288" Margin="32,0,32,0" CanUserAddRows="false" IsReadOnly="True">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="Código Departamento" Binding="{Binding depCode}" Width="80"/>
                                 <DataGridTextColumn Header="Código Municipio" Binding="{Binding code}" Width="80"/>
@@ -60,14 +61,16 @@
                 </Grid>
             </TabItem>
 
-            <TabItem Header="Reporte 2" >
+            <TabItem>
+                <TabItem.Header>
+                    <Label Content="ReporteEEEEEESSSS 2" 
+                MouseLeftButtonDown="R2Tab_Clicked" 
+                HorizontalAlignment="Stretch"/>
+                </TabItem.Header>
                 <Grid>
-                    <DVC:Chart Canvas.Top="80" Canvas.Left="10" Name="pieChart" Width="600" Height="320" Background="SteelBlue">
-                        <DVC:Chart.Series>
-                            <DVC:PieSeries Title="Experience" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}">
-                            </DVC:PieSeries>
-                        </DVC:Chart.Series>
-                    </DVC:Chart>
+                    <lvc:PieChart x:Name="pieChart" LegendLocation="Bottom" Series="{Binding SeriesCollection}">
+
+                    </lvc:PieChart>
                 </Grid>
             </TabItem>
             
