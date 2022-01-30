@@ -24,5 +24,20 @@ namespace Municipal_reports
         {
             InitializeComponent();
         }
+
+        private void dGRep1_SelChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void loadCsv(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void letterSelected(object sender, RoutedEventArgs e)
+        {
+
+        }
+        
     }
 }

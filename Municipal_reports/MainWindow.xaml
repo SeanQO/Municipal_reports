@@ -9,11 +9,53 @@
     <Grid>
         <TabControl>
             <TabItem Header="Cargar" >
-                <Grid></Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" >
+                        <Button Content="Seleccionar csv" Margin="32" HorizontalAlignment="Left" Height="24" Width="88" Click="loadCsv"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1">
+                        <DataGrid x:Name="dataGridOne" Height="288" Margin="32,0,32,0" CanUserAddRows="false" IsReadOnly="True">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Código Departamento" Binding="{Binding depCode}" Width="80"/>
+                                <DataGridTextColumn Header="Código Municipio" Binding="{Binding code}" Width="80"/>
+                                <DataGridTextColumn Header="Nombre Departamento" Binding="{Binding depName}" Width="*"/>
+                                <DataGridTextColumn Header="Nombre Municipio" Binding="{Binding name}" Width="*"/>
+                                <DataGridTextColumn Header="Tipo Municipio" Binding="{Binding type}" Width="*"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </Grid>
             </TabItem>
 
             <TabItem Header="Reporte 1">
-                <Grid></Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" >
+                        <ComboBox x:Name="comboBoxLetters"  Margin="32" HorizontalAlignment="Left" Height="24" Width="88" SelectionChanged="letterSelected"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1">
+                        <DataGrid x:Name="dataGridTwo" Height="288" Margin="32,0,32,0" CanUserAddRows="false" IsReadOnly="True" SelectionChanged="dGRep1_SelChanged">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Código Departamento" Binding="{Binding depCode}" Width="80"/>
+                                <DataGridTextColumn Header="Código Municipio" Binding="{Binding code}" Width="80"/>
+                                <DataGridTextColumn Header="Nombre Departamento" Binding="{Binding depName}" Width="*"/>
+                                <DataGridTextColumn Header="Nombre Municipio" Binding="{Binding name}" Width="*"/>
+                                <DataGridTextColumn Header="Tipo Municipio" Binding="{Binding type}" Width="*"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </Grid>
             </TabItem>
 
             <TabItem Header="Reporte 2" >
