@@ -82,10 +82,41 @@ namespace Municipal_reports
 
         }
 
-        private void letterSelected(object sender, RoutedEventArgs e)
+        private void letterSelected(object sender, SelectionChangedEventArgs e)
         {
+            char selectedLetter = comboBoxLetters.SelectedItem.ToString()[0];
+
+            loadTableTwo(filteredMunicipalities(selectedLetter));
 
         }
-        
+
+        private List<Municipality> filteredMunicipalities(char letter)
+        {
+            List<Municipality> filteredMunicipalities = new List<Municipality>();
+
+            foreach (Municipality m in municipalities)
+            {
+                if (m.depName[0].Equals(char.ToUpperInvariant(letter)))
+                {
+                    filteredMunicipalities.Add(m);
+
+                }
+
+            }
+
+            return filteredMunicipalities;
+        }
+
+        private void loadTableTwo(List<Municipality> filteredMunicipalities)
+        {
+            dataGridTwo.Items.Clear();
+            foreach (Municipality m in filteredMunicipalities)
+            {
+                dataGridTwo.Items.Add(m);
+
+            }
+
+        }
+
     }
 }
