@@ -7,6 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <TabControl>
+            <TabItem Header="Cargar" >
+                <Grid></Grid>
+            </TabItem>
+
+            <TabItem Header="Reporte 1">
+                <Grid></Grid>
+            </TabItem>
+
+            <TabItem Header="Reporte 2" >
+                <Grid></Grid>
+            </TabItem>
+            
+        </TabControl>
         
     </Grid>
+    
 </Window>
