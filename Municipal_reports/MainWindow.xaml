@@ -63,7 +63,7 @@
 
             <TabItem>
                 <TabItem.Header>
-                    <Label Content="ReporteEEEEEESSSS 2" 
+                    <Label Content="Reporte 2" 
                 MouseLeftButtonDown="R2Tab_Clicked" 
                 HorizontalAlignment="Stretch"/>
                 </TabItem.Header>

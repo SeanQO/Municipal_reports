@@ -80,7 +80,6 @@ namespace Municipal_reports
         {
             
             if (municipalities.Count != 0) {
-                Console.Out.WriteLine("HELLOOOO");
 
                 int mCounter = 0;
                 int iCounter = 0;
