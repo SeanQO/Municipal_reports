@@ -12,3 +12,9 @@ E:\Desktop\u\7mo\Integrador\intro.net\Municipal_reports\Municipal_reports\obj\De
 E:\Desktop\u\7mo\Integrador\intro.net\Municipal_reports\Municipal_reports\obj\Debug\Municipal_reports.csproj.CoreCompileInputs.cache
 E:\Desktop\u\7mo\Integrador\intro.net\Municipal_reports\Municipal_reports\obj\Debug\Municipal_reports.exe
 E:\Desktop\u\7mo\Integrador\intro.net\Municipal_reports\Municipal_reports\obj\Debug\Municipal_reports.pdb
+E:\Desktop\u\7mo\Integrador\intro.net\Municipal_reports\Municipal_reports\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+E:\Desktop\u\7mo\Integrador\intro.net\Municipal_reports\Municipal_reports\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+E:\Desktop\u\7mo\Integrador\intro.net\Municipal_reports\Municipal_reports\bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
+E:\Desktop\u\7mo\Integrador\intro.net\Municipal_reports\Municipal_reports\bin\Debug\WPFToolkit.dll
+E:\Desktop\u\7mo\Integrador\intro.net\Municipal_reports\Municipal_reports\obj\Debug\Municipal_reports.csproj.AssemblyReference.cache
+E:\Desktop\u\7mo\Integrador\intro.net\Municipal_reports\Municipal_reports\obj\Debug\Municipal_reports.csproj.CopyComplete
